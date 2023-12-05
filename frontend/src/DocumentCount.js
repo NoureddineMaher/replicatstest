@@ -12,11 +12,13 @@ const DocumentCount = () => {
 
     // Listen for documentCount updates for "superheroes" collection
     socket.on('documentCount', ({ count }) => {
+      console.log("Document Count", count);
       setSuperheroesCount(count);
     });
 
     // Listen for documentNamesCount updates for "names" collection
     socket.on('documentNamesCount', ({ countNames }) => {
+      console.log("Names Count", countNames);
       setNamesCount(countNames);
     });
 
